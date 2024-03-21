@@ -5,7 +5,7 @@ function setupPopup() {
     }
 
     function closePopup() {
-        document.getElementById("popup-basement").style.display = "none";
+        document.getElementById("popup").style.display = "none";
     }
 
     function handleAreaClick() {
