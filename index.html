@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Title</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="http://d6449bb3dc657045bfc9-290115cc0d6de62a29c33db202ae565c.r80.cf1.rackcdn.com/658/image-map-pro.min.css"
@@ -15,6 +15,13 @@
     />
   </head>
   <body>
+    <div id="popup-basement">
+        <div id="popupContent">
+        <img src="/CNProjects/CNGame/assets/01_finished_basement_set_7_before_rid_6822_rid.jpg"/>
+        <button id="close" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    
     <div class="container" id="container">
 
       <script
@@ -45,7 +52,7 @@
     height: 14.102,
     actions: {
       click: "follow-link",
-      link: "https://www.healthybasementsystems.com/air-purifier.html",
+    //   link: "https://www.healthybasementsystems.com/air-purifier.html",
       open_link_in_new_window: 0,
     },
     default_style: {
@@ -93,7 +100,7 @@
     height: 10.623,
     actions: {
       click: "follow-link",
-      link: "https://www.healthybasementsystems.com/basement-finishing.html",
+    //   link: "https://www.healthybasementsystems.com/basement-finishing.html",
       open_link_in_new_window: 0,
     },
     default_style: {
@@ -633,7 +640,11 @@
             });
           });
         })(jQuery, window, document);
+
+
+
       </script>
+      <script src="script.js"></script>
           </div>
   </body>
 </html>

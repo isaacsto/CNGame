@@ -1,0 +1,20 @@
+#popup {
+    display: none; 
+    max-width: 100%; 
+}
+
+#popupContent {
+    position: fixed; /* Change position to fixed */
+    top: 50%; /* Align the top of the element at 50% of the viewport height */
+    left: 50%; /* Align the left of the element at 50% of the viewport width */
+    transform: translate(-50%, -50%); /* Translate the element by -50% of its own width and height */
+    z-index: 100; 
+    display: flex; 
+    justify-content: center; 
+    flex-direction: column; 
+    background-repeat: no-repeat;
+}
+#popupContent img {
+ width: 500px; 
+ height:500px; 
+}
