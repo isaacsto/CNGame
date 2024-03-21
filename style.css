@@ -1,13 +1,46 @@
+
+#container {
+    background-image: url('https://cdn.treehouseinternetgroup.com/cms_images/48/No problem house_drft10 (1).jpg');
+    background-repeat: no-repeat;
+    height: 100%; 
+    display: grid; 
+    grid-template-columns: repeat(14, 1fr); 
+    grid-template-rows: repeat(14, 1fr);
+}
+
+.svg-wrap {
+    width: auto; 
+    height: auto;
+    object-fit: contain; 
+}
+
+.gutters {
+    grid-column: 4; 
+    grid-row: 6; 
+}
+.crawl-space {
+    grid-column: 4; 
+    grid-row: 12; 
+}
+.water-proofing {
+    grid-column: 12; 
+    grid-row: 13;
+}
+.foundation {
+    grid-column: 5; 
+    grid-row: 13; 
+}
+
 #popup {
     display: none; 
     max-width: 100%; 
 }
 
 #popupContent {
-    position: fixed; /* Change position to fixed */
-    top: 50%; /* Align the top of the element at 50% of the viewport height */
-    left: 50%; /* Align the left of the element at 50% of the viewport width */
-    transform: translate(-50%, -50%); /* Translate the element by -50% of its own width and height */
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
     z-index: 100; 
     display: flex; 
     justify-content: center; 
