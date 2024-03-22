@@ -101,7 +101,7 @@
  border-radius: 10px; 
 }
 
-.svg-popup-grid {
+.svg-popup-grid, .svg-popup-grid-wp {
     position: absolute;
     top: 0; 
     left: 0; 
@@ -113,17 +113,17 @@
     pointer-events: none; 
 }
 
-.svg-popup-wrap {
+.svg-popup-wrap, .svg-popup-wrap-wp {
     width: auto;
     height: auto;
     object-fit: contain;
     pointer-events: auto; 
 }
-.svg-popup-wrap circle {
+.svg-popup-wrap circle, .svg-popup-wrap-wp-wp circle {
     stroke: rgb(243, 121, 141); 
     stroke-width: 1px; 
 }
-.svg-popup-wrap:hover circle {
+.svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle {
     fill: rgb(243, 121, 141); 
     cursor:pointer; 
     stroke:#015eb8; 
@@ -153,6 +153,10 @@ button#close:hover, button#close-wp:hover {
     grid-column: 9;
     grid-row: 9; 
 }
+.svg-popup-wrap-wp {
+    grid-column: 9;
+    grid-row: 9; 
+}
 
 
 .svg-popup-grid {
@@ -175,12 +179,12 @@ button#close:hover, button#close-wp:hover {
     pointer-events: auto;
 }
 
-.svg-popup-wrap circle {
+.svg-popup-wrap circle, .svg-popup-wrap-wp circle{
     stroke: rgb(243, 121, 141);
     stroke-width: 1px;
 }
 
-.speech-bubble {
+.speech-bubble, .speech-bubble-wp {
     position: absolute;
     display: none;
     width: 200px;
