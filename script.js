@@ -9,6 +9,7 @@ function closePopupBF() {
     const popup = document.getElementById("popup");
     popup.style.display = "none";
     document.body.classList.remove("popup-active");
+    document.getElementById("overlay").style.display = "none";
 
 }
 
@@ -17,12 +18,15 @@ function closePopupWP() {
     popup.style.display = "none";
     document.body.classList.remove("popup-active");
     document.getElementById("quiz-popup-wp").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
 }
 
 function openBasementFinishing() {
     const popup = document.getElementById("popup");
     popup.style.display = "block";
     document.body.classList.add("popup-active");
+    document.getElementById("overlay").style.display = "block";
+ 
 
 const popupImage = document.getElementById("popup-image-finishing");
 const changePhotoButton = document.getElementById("changePhoto");
@@ -105,6 +109,7 @@ function openBasementWaterproofing() {
     const popup = document.getElementById("popup-wp");
     popup.style.display = "block";
     document.body.classList.add("popup-active");
+    document.getElementById("overlay").style.display = "block";
     
     const popupImage = document.getElementById("popup-image-wp");
     const changePhotoButton = document.getElementById("changePhoto-wp");
