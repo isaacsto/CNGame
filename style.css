@@ -252,6 +252,12 @@ button#close:hover, button#close-wp:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+form {
+    padding: 10px; 
+}
+label {
+    padding: 5px; 
+}
 
 #overlay {
     position: fixed;
@@ -262,4 +268,53 @@ button#close:hover, button#close-wp:hover {
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 999; 
     display: none; 
+}
+
+.links {
+    display: flex; 
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px; 
+    gap: 2rem; 
+}
+
+.links a {
+    width: 50%; 
+    text-decoration: none;
+    color: #ffffff; 
+    background-color:#ea1d2c; 
+    padding: 10px; 
+    text-align: center; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-weight: 600; 
+}
+.links a:hover {
+    background-color:  #000000; 
+}
+.links button {
+    width: 50%; 
+    border: none; 
+    background-color: #005eb8; 
+    color: white; 
+    font-weight: 600; 
+    padding: 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+.links button:hover {
+    background-color: #000000; 
+}
+h2 {
+    font-size: 2rem; 
+    text-align: center; 
+}
+.share button {
+    border: none; 
+    background-color: #1877f2; 
+    color: white; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    border-radius: 5px; 
+    cursor: pointer;
 }

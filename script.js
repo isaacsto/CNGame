@@ -85,7 +85,7 @@ quizForm.addEventListener("submit", function(event) {
     } else {
         const answer = selectedAnswer.value;
         if (answer === "d") {
-            resultText.textContent = "Correct!";
+            resultText.textContent = "Correct! Do you want to share this on Facebook?";
         } else {
             resultText.textContent = "Sorry, try again!";
         }
@@ -168,7 +168,7 @@ function openBasementWaterproofing() {
         } else {
             const answer = selectedAnswer.value;
             if (answer === "d") {
-                resultText.textContent = "Correct!";
+                resultText.textContent = "Correct! Do you want to share this on Facebook?";
             } else {
                 resultText.textContent = "Sorry, try again!";
             }
@@ -186,8 +186,9 @@ function openBasementWaterproofing() {
         window.open(facebookShareUrl, "_blank");
     });
     
-    }
+}
     
 
 
 
+    
