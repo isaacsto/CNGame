@@ -7,6 +7,7 @@ function openPopup() {
 
     function closePopup() {
         document.getElementById("popup").style.display = "none";
+        document.getElementById("quiz-popup").style.display = "none";
     }
 
     function handleAreaClick() {
@@ -14,6 +15,7 @@ function openPopup() {
     }
 
 document.getElementById("finishing").addEventListener("click", handleAreaClick);
+document.getElementById("water-proofing").addEventListener("click", handleAreaClick);
 
 document.getElementById("close").addEventListener("click", closePopup);
 
@@ -59,11 +61,43 @@ backPhotoButton.addEventListener("click", function() {
 }
 
 });
+const popupQuiz= document.getElementById("quiz-popup");
 
 nextPopupButton.addEventListener("click", function() {
-    document.getElementById("popup-quiz").style.display = "block";
-    document.getElementById("popup").style.display = "none";
+    popupQuiz.style.display = "block";
+    popupQuiz.classList.add("quiz-active");
 });
+
+
+const quizForm = document.getElementById("quiz-form-finishing");
+const resultText = document.getElementById("result");
+
+
+quizForm.addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    if (!selectedAnswer) {
+        resultText.textContent = "Please select an answer.";
+    } else {
+        const answer = selectedAnswer.value;
+        if (answer === "d") {
+            resultText.textContent = "Correct! Both options (a and b) are benefits of finishing your basement.";
+        } else {
+            resultText.textContent = "Sorry, the correct answer is d. Both options (a and b) are benefits of finishing your basement.";
+        }
+    }
+});
+
+const shareFacebookButton = document.getElementById("share_button");
+shareFacebookButton.addEventListener("click", function() {
+    // Open Facebook share dialog
+    const shareUrl = "https://www.connecticutbasementsystems.com/basement-finishing.html";
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+    window.open(facebookShareUrl, "_blank");
+});
+
+
+
 
 
 

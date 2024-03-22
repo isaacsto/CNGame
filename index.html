@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Basement Finishing Quiz" />
+    <meta property="og:description" content="I just finished the Basement Finishing Quiz!" />
+    <meta property="og:image" content="https://example.com/quiz-image.jpg" />
     <title>Title</title>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -33,16 +36,34 @@
                   </svg>
                   <div class="speech-bubble finishing">Add value to your home by renovating a space you already have!</div>
               </div>
-             
           </div>
       </div>
   </div>
 
-  <div id = "popup-quiz"> 
+  <div id="quiz-popup" class="popup-finishing">
+    <div class="quiz-content">
+        <h2>Basement Finishing Quiz</h2>
+        <p>What is a benefit of finishing your basement?</p>
+        <form id="quiz-form-finishing">
+            <input type="radio" name="answer" value="a" id="option-a">
+            <label for="option-a">a. Save on energy costs</label><br>
+            <input type="radio" name="answer" value="b" id="option-b">
+            <label for="option-b">b. Increase the value of your home</label><br>
+            <input type="radio" name="answer" value="c" id="option-c">
+            <label for="option-c">c. Improve your Wi-Fi signal strength throughout the house</label><br>
+            <input type="radio" name="answer" value="d" id="option-d">
+            <label for="option-d">d. Both a. and b. </label><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="result"></p>
+        <div class="share">
+          <button id = "share_button">Share to facebook</button>
+        </div>
+       
+    </div>
+</div>
 
-  </div>
-  
-   
+
 
     <div class="container" id="container">
     <img src="https://cdn.treehouseinternetgroup.com/cms_images/48/No problem house_drft10 (1).jpg">
