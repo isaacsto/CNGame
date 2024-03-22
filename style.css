@@ -121,7 +121,7 @@
     stroke:#015eb8; 
 }
 
-button#close {
+button#close, button#close-wp {
     position: absolute;
     top: 10px;
     left: 10px; 
@@ -135,7 +135,7 @@ button#close {
     z-index: 1;
 }
 
-button#close:hover {
+button#close:hover, button#close-wp:hover {
     color: white;
     background: #333;
 }
@@ -159,7 +159,7 @@ button#close:hover {
     pointer-events: none;
 }
 
-.svg-popup-wrap {
+.svg-popup-wrap, .svg-popup-wrap-wp {
     position: relative; 
     width: auto;
     height: auto;
@@ -219,14 +219,14 @@ button#close:hover {
     transition: opacity 5s ease; 
 }
 
-#nextPopup {
+#nextPopup, #next-popup-wp {
     display: none; 
 }
-#quiz-popup {
+#quiz-popup, #quiz-popup-wp, #popup-wp, #share_button, #share_button_wp {
     display: none;  
 }
 
-.quiz-content {
+.quiz-content, .quiz-content-wp {
     position: fixed; 
     top: 50%;
     left: 50%;
@@ -241,7 +241,7 @@ button#close:hover {
     padding: 20px; 
 }
 
-#quiz-popup-wp {
+/* #quiz-popup-wp {
     display: none; 
 }
 
@@ -251,4 +251,4 @@ button#close:hover {
 
 #share_button {
     display: none; 
-}
+} */

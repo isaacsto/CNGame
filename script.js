@@ -1,9 +1,13 @@
 document.getElementById("finishing").addEventListener("click", openBasementFinishing);
+document.getElementById("water-proofing").addEventListener("click", openBasementWaterproofing);
 document.getElementById("close").addEventListener("click", closePopup);
+document.getElementById("close-wp").addEventListener("click", closePopup);
 
 function closePopup() {
     document.getElementById("popup").style.display = "none";
     document.getElementById("quiz-popup").style.display = "none";
+    document.getElementById("popup-wp").style.display = "none";
+    document.getElementById("quiz-popup-wp").style.display = "none";
 }
 
 function openBasementFinishing() {
@@ -86,11 +90,86 @@ shareFacebookButton.addEventListener("click", function() {
 
 }
 
-
-
-
-
-
+function openBasementWaterproofing() {
+    document.getElementById("popup-wp").style.display = "block";
+    
+    const popupImage = document.getElementById("popup-image-wp");
+    const changePhotoButton = document.getElementById("changePhoto-wp");
+    const backPhotoButton = document.getElementById("backPhoto-wp");
+    const svgGrid = document.querySelector(".svg-popup-wrap-wp");
+    
+    const imageUrls = [
+        "/CNProjects/CNGame/assets/waterguard_east_haven_before.jpg",
+        "/CNProjects/CNGame/assets/waterguard_east_haven_finished_after.jpg", 
+    ];
+    let currentImageIndex = 0; 
+    
+    backPhotoButton.style.display = "none";
+    const nextPopupButton = document.getElementById("next-popup-wp");
+    
+    changePhotoButton.addEventListener("click", function() {
+        if (currentImageIndex < imageUrls.length - 1) {
+        currentImageIndex++;
+        popupImage.src = imageUrls[currentImageIndex];
+        backPhotoButton.style.display = "inline-block";
+        svgGrid.classList.add("hide");
+        popupImage.style.opacity = 0;
+        setTimeout(() => {
+            popupImage.style.opacity = 1;
+        }, 100);
+        changePhotoButton.style.display = "none";
+        nextPopupButton.style.display = "inline-block";
+    }
+    
+    });
+    backPhotoButton.addEventListener("click", function() {
+        if (currentImageIndex > 0) {
+        currentImageIndex--;
+        popupImage.src = imageUrls[currentImageIndex];
+        svgGrid.classList.add("hide");
+        popupImage.style.opacity = 0;
+        setTimeout(() => {
+            popupImage.style.opacity = 1;
+        }, 100);
+    }
+    });
+    const popupQuiz= document.getElementById("quiz-popup-wp");
+    
+    nextPopupButton.addEventListener("click", function() {
+        popupQuiz.style.display = "block";
+        popupQuiz.classList.add("quiz-active");
+    });
+    const quizForm = document.getElementById("quiz-form-wp");
+    const resultText = document.getElementById("result-wp");
+    
+    quizForm.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        if (!selectedAnswer) {
+            resultText.textContent = "Please select an answer.";
+        } else {
+            const answer = selectedAnswer.value;
+            if (answer === "d") {
+                resultText.textContent = "Correct!";
+            } else {
+                resultText.textContent = "Sorry, try again!";
+            }
+        }
+    });
+    document.getElementById("quiz-form-wp").addEventListener("submit", showButton )
+    
+    function showButton() {
+        document.getElementById("share_button_wp").style.display = "block";
+    }
+    const shareFacebookButton = document.getElementById("share_button_wp");
+    shareFacebookButton.addEventListener("click", function() {
+        const shareUrl = "https://www.connecticutbasementsystems.com/basement-finishing.html";
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        window.open(facebookShareUrl, "_blank");
+    });
+    
+    }
+    
 
 
 
