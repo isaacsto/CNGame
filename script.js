@@ -1,17 +1,28 @@
 document.getElementById("finishing").addEventListener("click", openBasementFinishing);
 document.getElementById("water-proofing").addEventListener("click", openBasementWaterproofing);
-document.getElementById("close").addEventListener("click", closePopup);
-document.getElementById("close-wp").addEventListener("click", closePopup);
+document.getElementById("close").addEventListener("click", closePopupBF);
+document.getElementById("close-wp").addEventListener("click", closePopupWP);
 
-function closePopup() {
+function closePopupBF() {
     document.getElementById("popup").style.display = "none";
     document.getElementById("quiz-popup").style.display = "none";
-    document.getElementById("popup-wp").style.display = "none";
+    const popup = document.getElementById("popup");
+    popup.style.display = "none";
+    document.body.classList.remove("popup-active");
+
+}
+
+function closePopupWP() {
+    const popup = document.getElementById("popup-wp");
+    popup.style.display = "none";
+    document.body.classList.remove("popup-active");
     document.getElementById("quiz-popup-wp").style.display = "none";
 }
 
 function openBasementFinishing() {
-document.getElementById("popup").style.display = "block";
+    const popup = document.getElementById("popup");
+    popup.style.display = "block";
+    document.body.classList.add("popup-active");
 
 const popupImage = document.getElementById("popup-image-finishing");
 const changePhotoButton = document.getElementById("changePhoto");
@@ -91,7 +102,9 @@ shareFacebookButton.addEventListener("click", function() {
 }
 
 function openBasementWaterproofing() {
-    document.getElementById("popup-wp").style.display = "block";
+    const popup = document.getElementById("popup-wp");
+    popup.style.display = "block";
+    document.body.classList.add("popup-active");
     
     const popupImage = document.getElementById("popup-image-wp");
     const changePhotoButton = document.getElementById("changePhoto-wp");

@@ -70,6 +70,7 @@
 #popup {
     display: none; 
     max-width: 100%; 
+  
 }
 
 #popupContent {
@@ -83,7 +84,8 @@
     flex-direction: column; 
     background-repeat: no-repeat;
     background-color: white; 
-    border-radius: 20px;   
+    border-radius: 20px;  
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 #popupContent img {
