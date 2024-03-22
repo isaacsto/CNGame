@@ -1,3 +1,5 @@
+let currentImageIndex = 0;
+
 document.getElementById("finishing").addEventListener("click", openBasementFinishing);
 document.getElementById("water-proofing").addEventListener("click", openBasementWaterproofing);
 document.getElementById("close").addEventListener("click", closePopupBF);
@@ -10,6 +12,9 @@ function closePopupBF() {
     popup.style.display = "none";
     document.body.classList.remove("popup-active");
     document.getElementById("overlay").style.display = "none";
+    history.replaceState(null, "", window.location.pathname);
+    currentImageIndex = 0; 
+    location.reload();
 
 }
 
@@ -19,6 +24,8 @@ function closePopupWP() {
     document.body.classList.remove("popup-active");
     document.getElementById("quiz-popup-wp").style.display = "none";
     document.getElementById("overlay").style.display = "none";
+    currentImageIndex = 0; 
+    location.reload();
 }
 
 function openBasementFinishing() {
@@ -120,7 +127,7 @@ function openBasementWaterproofing() {
         "/CNProjects/CNGame/assets/waterguard_east_haven_before.jpg",
         "/CNProjects/CNGame/assets/waterguard_east_haven_finished_after.jpg", 
     ];
-    let currentImageIndex = 0; 
+    currentImageIndex = 0; 
     
     backPhotoButton.style.display = "none";
     const nextPopupButton = document.getElementById("next-popup-wp");

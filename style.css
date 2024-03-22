@@ -1,6 +1,15 @@
 * {
     font: 16px Arial, sans-serif;
 }
+
+h1 {
+    font-size: 30px; 
+    padding: 10px; 
+    color: #0b4882; 
+    font-weight: 600; 
+    font-family: 'tg-adventor-bold', 'Adjusted Arial Bold Fallback', sans-serif; 
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -11,6 +20,7 @@
     height: auto;
     display: block;
 }
+
 
 .svg-grid {
     position: absolute;
@@ -45,23 +55,23 @@
     cursor:pointer; 
     stroke:#015eb8; 
 }
-.gutters {
+#gutters {
     grid-column: 3; 
     grid-row: 7; 
 }
-.crawl-space {
+#crawl-space {
     grid-column: 4; 
     grid-row: 12; 
 }
-.water-proofing {
+#water-proofing {
     grid-column: 16; 
     grid-row: 13;
 }
-.foundation {
+#foundation {
     grid-column: 6; 
     grid-row: 13; 
 }
-.svg-wrap.finishing {
+#finishing {
     grid-column: 12; 
     grid-row: 13; 
 
@@ -158,7 +168,6 @@ button#close:hover, button#close-wp:hover {
     grid-row: 9; 
 }
 
-
 .svg-popup-grid {
     position: absolute;
     top: 0;
@@ -184,7 +193,8 @@ button#close:hover, button#close-wp:hover {
     stroke-width: 1px;
 }
 
-.speech-bubble, .speech-bubble-wp {
+
+.speech-bubble, .speech-bubble-wp, .label {
     position: absolute;
     display: none;
     width: 200px;
@@ -199,9 +209,14 @@ button#close:hover, button#close-wp:hover {
     transform: translateX(-50%); 
 }
 
-.svg-popup-wrap:hover .speech-bubble {
+.svg-popup-wrap:hover .speech-bubble, .svg-popup-wrap-wp:hover .speech-bubble-wp{
     display: block;
 }
+
+#finishing:hover .label{
+    display: block; 
+}
+
 
 .change-btns{
     display: flex; 
@@ -237,8 +252,6 @@ button#close:hover, button#close-wp:hover {
 #quiz-popup, #quiz-popup-wp, #popup-wp, #share_button, #share_button_wp {
     display: none;  
 }
-
-
 
 .quiz-content, .quiz-content-wp {
     position: fixed; 
