@@ -1,11 +1,51 @@
-
+/* 
 #container {
-    background-image: url('https://cdn.treehouseinternetgroup.com/cms_images/48/No problem house_drft10 (1).jpg');
-    background-repeat: no-repeat;
-    height: 100%; 
+    position: relative; 
+    height: 1000px; 
+  
+}
+
+#container img {
+   height: 1000px; 
+   z-index: -1; 
+   object-fit: cover;
+}
+
+.svg-grid {
+    position: absolute; 
     display: grid; 
-    grid-template-columns: repeat(14, 1fr); 
-    grid-template-rows: repeat(14, 1fr);
+    grid-template-columns: repeat(18, 1fr); 
+    grid-template-rows: repeat(18, 1fr);
+    z-index: 1; 
+} */
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.svg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    pointer-events: none; /* Ensure SVG grid doesn't block mouse events */
+}
+
+.svg-wrap {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    pointer-events: auto; /* Allow mouse events on SVG elements */
 }
 
 .svg-wrap {
@@ -13,22 +53,35 @@
     height: auto;
     object-fit: contain; 
 }
-
+.svg-wrap circle {
+    stroke: rgb(243, 121, 141); 
+    stroke-width: 1px; 
+}
+.svg-wrap:hover circle {
+    fill: rgb(243, 121, 141); 
+    cursor:pointer; 
+    stroke:#015eb8; 
+}
 .gutters {
-    grid-column: 4; 
-    grid-row: 6; 
+    grid-column: 3; 
+    grid-row: 7; 
 }
 .crawl-space {
     grid-column: 4; 
     grid-row: 12; 
 }
 .water-proofing {
-    grid-column: 12; 
+    grid-column: 16; 
     grid-row: 13;
 }
 .foundation {
-    grid-column: 5; 
+    grid-column: 6; 
     grid-row: 13; 
+}
+.finishing {
+    grid-column: 12; 
+    grid-row: 13; 
+
 }
 
 #popup {
@@ -46,8 +99,31 @@
     justify-content: center; 
     flex-direction: column; 
     background-repeat: no-repeat;
+    background-color: white; 
+    border-radius: 10px;   
 }
+
 #popupContent img {
- width: 500px; 
- height:500px; 
+ width: 900px; 
+ height:800px; 
+ padding: 20px; 
+ border-radius: 10px; 
 }
+#close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgb(228, 227, 227);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333; 
+    outline: none;
+    float: left; 
+    font-weight: 800; 
+}
+
+#close:hover {
+    color: white; 
+    background: #333; 
+} 

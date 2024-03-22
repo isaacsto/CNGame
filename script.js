@@ -13,7 +13,7 @@ function openPopup() {
         openPopup();
     }
 
-document.getElementById("oval-8708").addEventListener("click", handleAreaClick);
+document.getElementById("finishing").addEventListener("click", handleAreaClick);
 
 document.getElementById("close").addEventListener("click", closePopup);
 
