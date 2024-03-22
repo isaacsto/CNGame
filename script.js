@@ -1,23 +1,13 @@
-
-
-function openPopup() {
-        document.getElementById("popup").style.display = "block";
-}
-  
-
-    function closePopup() {
-        document.getElementById("popup").style.display = "none";
-        document.getElementById("quiz-popup").style.display = "none";
-    }
-
-    function handleAreaClick() {
-        openPopup();
-    }
-
-document.getElementById("finishing").addEventListener("click", handleAreaClick);
-document.getElementById("water-proofing").addEventListener("click", handleAreaClick);
-
+document.getElementById("finishing").addEventListener("click", openBasementFinishing);
 document.getElementById("close").addEventListener("click", closePopup);
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("quiz-popup").style.display = "none";
+}
+
+function openBasementFinishing() {
+document.getElementById("popup").style.display = "block";
 
 const popupImage = document.getElementById("popup-image-finishing");
 const changePhotoButton = document.getElementById("changePhoto");
@@ -28,7 +18,6 @@ const imageUrls = [
     "/CNProjects/CNGame/assets/01_finished_basement_set_7_before_rid_6822_rid.jpg",
     "/CNProjects/CNGame/assets/02_finished_basement_set_7_after_rid_6816_rid.jpg", 
 ];
-
 let currentImageIndex = 0; 
 
 backPhotoButton.style.display = "none";
@@ -59,7 +48,6 @@ backPhotoButton.addEventListener("click", function() {
         popupImage.style.opacity = 1;
     }, 100);
 }
-
 });
 const popupQuiz= document.getElementById("quiz-popup");
 
@@ -67,11 +55,8 @@ nextPopupButton.addEventListener("click", function() {
     popupQuiz.style.display = "block";
     popupQuiz.classList.add("quiz-active");
 });
-
-
 const quizForm = document.getElementById("quiz-form-finishing");
 const resultText = document.getElementById("result");
-
 
 quizForm.addEventListener("submit", function(event) {
     event.preventDefault(); 
@@ -81,20 +66,25 @@ quizForm.addEventListener("submit", function(event) {
     } else {
         const answer = selectedAnswer.value;
         if (answer === "d") {
-            resultText.textContent = "Correct! Both options (a and b) are benefits of finishing your basement.";
+            resultText.textContent = "Correct!";
         } else {
-            resultText.textContent = "Sorry, the correct answer is d. Both options (a and b) are benefits of finishing your basement.";
+            resultText.textContent = "Sorry, try again!";
         }
     }
 });
+document.getElementById("quiz-form-finishing").addEventListener("submit", showButton )
 
+function showButton() {
+    document.getElementById("share_button").style.display = "block";
+}
 const shareFacebookButton = document.getElementById("share_button");
 shareFacebookButton.addEventListener("click", function() {
-    // Open Facebook share dialog
     const shareUrl = "https://www.connecticutbasementsystems.com/basement-finishing.html";
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
     window.open(facebookShareUrl, "_blank");
 });
+
+}
 
 
 

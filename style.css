@@ -121,7 +121,7 @@
     stroke:#015eb8; 
 }
 
-#close {
+button#close {
     position: absolute;
     top: 10px;
     left: 10px; 
@@ -135,7 +135,7 @@
     z-index: 1;
 }
 
-#close:hover {
+button#close:hover {
     color: white;
     background: #333;
 }
@@ -241,4 +241,14 @@
     padding: 20px; 
 }
 
+#quiz-popup-wp {
+    display: none; 
+}
 
+#popup-wp {
+    display: none; 
+}
+
+#share_button {
+    display: none; 
+}
