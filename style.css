@@ -21,7 +21,6 @@ h1 {
     display: block;
 }
 
-
 .svg-grid {
     position: absolute;
     top: 0;
@@ -31,30 +30,9 @@ h1 {
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(18, 1fr);
-    pointer-events: none; /* Ensure SVG grid doesn't block mouse events */
+    pointer-events: none; 
 }
 
-.svg-wrap {
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    pointer-events: auto; /* Allow mouse events on SVG elements */
-}
-
-.svg-wrap {
-    width: auto; 
-    height: auto;
-    object-fit: contain; 
-}
-.svg-wrap circle {
-    stroke: rgb(243, 121, 141); 
-    stroke-width: 1px; 
-}
-.svg-wrap:hover circle {
-    fill: rgb(243, 121, 141); 
-    cursor:pointer; 
-    stroke:#015eb8; 
-}
 #gutters {
     grid-column: 3; 
     grid-row: 7; 
@@ -76,17 +54,51 @@ h1 {
     grid-row: 13; 
 
 }
+.svg-wrap {
+    position: relative; 
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    pointer-events: auto;
+}
+.svg-wrap circle {
+    stroke: rgb(243, 121, 141); 
+    stroke-width: 1px; 
+}
+.svg-wrap:hover circle {
+    fill: rgb(243, 121, 141); 
+    cursor:pointer; 
+    stroke:#015eb8; 
+}
+.svg-wrap .label {
+    position: absolute;
+    display: none;
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 3000; 
+    bottom: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    pointer-events: auto; 
+}
 
-#popup, #popup-wp, #popup-gutters {
+.svg-wrap:hover .label {
+    display: block; 
+}
+
+#popup, #popup-wp, #popup-gutters, #popup-crawl {
     display: none; 
     max-width: 100%; 
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white; /* Popup background color */
-    z-index: 1000;
-  
+    background-color: white; 
+    z-index: 1000;  
 }
 
 #popupContent {
@@ -111,7 +123,7 @@ h1 {
  border-radius: 10px; 
 }
 
-.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters {
+.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-crawl {
     position: absolute;
     top: 0; 
     left: 0; 
@@ -123,23 +135,23 @@ h1 {
     pointer-events: none; 
 }
 
-.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters {
+.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl {
     width: auto;
     height: auto;
     object-fit: contain;
     pointer-events: auto; 
 }
-.svg-popup-wrap circle, .svg-popup-wrap-wp-wp circle, .svg-popup-wrap-gutters circle{
+.svg-popup-wrap circle, .svg-popup-wrap-wp-wp circle, .svg-popup-wrap-gutters circle, .svg-popup-wrap-crawl circle{
     stroke: rgb(243, 121, 141); 
     stroke-width: 1px; 
 }
-.svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle, .svg-popup-wrap-gutters:hover circle {
+.svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle, .svg-popup-wrap-gutters:hover circle, .svg-popup-wrap-crawl:hover circle{
     fill: rgb(243, 121, 141); 
     cursor:pointer; 
     stroke:#015eb8; 
 }
 
-button#close, button#close-wp, button#close-gutters {
+button#close, button#close-wp, button#close-gutters, button#close-crawl {
     position: absolute;
     top: 10px;
     left: 10px; 
@@ -153,7 +165,7 @@ button#close, button#close-wp, button#close-gutters {
     z-index: 1;
 }
 
-button#close:hover, button#close-wp:hover {
+button#close:hover, button#close-wp:hover, button#close-gutters:hover, button#close-crawl:hover{
     color: white;
     background: #333;
 }
@@ -163,7 +175,7 @@ button#close:hover, button#close-wp:hover {
     grid-column: 9;
     grid-row: 9; 
 }
-.svg-popup-wrap-wp, .svg-popup-wrap-gutters {
+.svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl {
     grid-column: 9;
     grid-row: 9; 
 }
@@ -180,7 +192,7 @@ button#close:hover, button#close-wp:hover {
     pointer-events: none;
 }
 
-.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters {
+.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl {
     position: relative; 
     width: auto;
     height: auto;
@@ -194,7 +206,7 @@ button#close:hover, button#close-wp:hover {
 }
 
 
-.speech-bubble, .speech-bubble-wp, .speech-bubble-gutters, .label {
+.speech-bubble, .speech-bubble-wp, .speech-bubble-gutters, .speech-bubble-crawl {
     position: absolute;
     display: none;
     width: 200px;
@@ -209,7 +221,10 @@ button#close:hover, button#close-wp:hover {
     transform: translateX(-50%); 
 }
 
-.svg-popup-wrap:hover .speech-bubble, .svg-popup-wrap-wp:hover .speech-bubble-wp, .svg-popup-wrap-gutters:hover .speech-bubble-gutters{
+.svg-popup-wrap:hover .speech-bubble, 
+.svg-popup-wrap-wp:hover .speech-bubble-wp, 
+.svg-popup-wrap-gutters:hover .speech-bubble-gutters, 
+.svg-popup-wrap-crawl, .svg-popup-wrap-crawl:hover .speech-bubble-crawl {   
     display: block;
 }
 
@@ -249,11 +264,12 @@ button#close:hover, button#close-wp:hover {
 #nextPopup, #next-popup-wp {
     display: none; 
 }
-#quiz-popup, #quiz-popup-wp, #popup-wp, #quiz-popup-gutters, #share_button, #share_button_wp, #share_button_gutters {
+#quiz-popup, #quiz-popup-wp, #popup-wp, #quiz-popup-gutters, #share_button,
+ #share_button_wp, #share_button_gutters, #share_button_crawl, #quiz-popup-crawl{
     display: none;  
 }
 
-.quiz-content, .quiz-content-wp, .quiz-content-gutters {
+.quiz-content, .quiz-content-wp, .quiz-content-gutters, .quiz-content-crawl {
     position: fixed; 
     top: 50%;
     left: 50%;

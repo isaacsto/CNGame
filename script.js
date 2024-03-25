@@ -3,10 +3,12 @@ let currentImageIndex = 0;
 document.getElementById("finishing").addEventListener("click", openBasementFinishing);
 document.getElementById("water-proofing").addEventListener("click", openBasementWaterproofing);
 document.getElementById("gutters").addEventListener("click", openGutters);
+document.getElementById("crawl-space").addEventListener("click", openCrawlSpace);
 
 document.getElementById("close").addEventListener("click", closePopupBF);
 document.getElementById("close-wp").addEventListener("click", closePopupWP);
 document.getElementById("close-gutters").addEventListener("click", closePopupGutters);
+document.getElementById("close-crawl").addEventListener("click", closePopupGutters);
 
 function closePopupBF() {
     document.getElementById("popup").style.display = "none";
@@ -35,6 +37,15 @@ function closePopupGutters() {
     popup.style.display = "none";
     document.body.classList.remove("popup-active");
     document.getElementById("quiz-popup-gutters").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+    currentImageIndex = 0; 
+    location.reload();
+}
+function closePopupCrawl() {
+    const popup = document.getElementById("popup-crawl");
+    popup.style.display = "none";
+    document.body.classList.remove("popup-crawl");
+    document.getElementById("quiz-popup-crawl").style.display = "none";
     document.getElementById("overlay").style.display = "none";
     currentImageIndex = 0; 
     location.reload();
@@ -290,4 +301,86 @@ function openGutters() {
     
 }
 
+function openCrawlSpace() {
+    const popup = document.getElementById("popup-crawl");
+    popup.style.display = "block";
+    document.body.classList.add("popup-active");
+    document.getElementById("overlay").style.display = "block";
+    
+    const popupImage = document.getElementById("popup-image-crawl");
+    const changePhotoButton = document.getElementById("changePhoto-crawl");
+    const backPhotoButton = document.getElementById("backPhoto-crawl");
+    const svgGrid = document.querySelector(".svg-popup-wrap-crawl");
+    
+    const imageUrls = [
+        "/CNProjects/CNGame/assets/crawl-space-before.jpg",
+        "/CNProjects/CNGame/assets/crawl-space-after.jpg", 
+    ];
+    currentImageIndex = 0; 
+    
+    backPhotoButton.style.display = "none";
+    const nextPopupButton = document.getElementById("next-popup-crawl");
+    
+    changePhotoButton.addEventListener("click", function() {
+        if (currentImageIndex < imageUrls.length - 1) {
+        currentImageIndex++;
+        popupImage.src = imageUrls[currentImageIndex];
+        backPhotoButton.style.display = "inline-block";
+        svgGrid.classList.add("hide");
+        popupImage.style.opacity = 0;
+        setTimeout(() => {
+            popupImage.style.opacity = 1;
+        }, 100);
+        changePhotoButton.style.display = "none";
+        nextPopupButton.style.display = "inline-block";
+    }
+    
+    });
+    backPhotoButton.addEventListener("click", function() {
+        if (currentImageIndex > 0) {
+        currentImageIndex--;
+        popupImage.src = imageUrls[currentImageIndex];
+        svgGrid.classList.add("hide");
+        popupImage.style.opacity = 0;
+        setTimeout(() => {
+            popupImage.style.opacity = 1;
+        }, 100);
+    }
+    });
+    const popupQuiz= document.getElementById("quiz-popup-crawl");
+    
+    nextPopupButton.addEventListener("click", function() {
+        popupQuiz.style.display = "block";
+        popupQuiz.classList.add("quiz-active");
+    });
+    const quizForm = document.getElementById("quiz-form-crawl");
+    const resultText = document.getElementById("result-crawl");
+    
+    quizForm.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        if (!selectedAnswer) {
+            resultText.textContent = "Please select an answer.";
+        } else {
+            const answer = selectedAnswer.value;
+            if (answer === "d") {
+                resultText.textContent = "Correct! Do you want to share this on Facebook?";
+            } else {
+                resultText.textContent = "Sorry, try again!";
+            }
+        }
+    });
+    document.getElementById("quiz-form-wp").addEventListener("submit", showButton )
+    
+    function showButton() {
+        document.getElementById("share_button_crawl").style.display = "block";
+    }
+    const shareFacebookButton = document.getElementById("share_button_crawl");
+    shareFacebookButton.addEventListener("click", function() {
+        const shareUrl = "https://www.connecticutbasementsystems.com/html";
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        window.open(facebookShareUrl, "_blank");
+    });
+    
+}
     
