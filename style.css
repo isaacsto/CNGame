@@ -52,7 +52,10 @@ h1 {
 #finishing {
     grid-column: 12; 
     grid-row: 13; 
-
+}
+#air-purifier {
+    grid-column: 11; 
+    grid-row:11; 
 }
 .svg-wrap {
     position: relative; 
@@ -90,7 +93,7 @@ h1 {
     display: block; 
 }
 
-#popup, #popup-wp, #popup-gutters, #popup-crawl {
+#popup, #popup-wp, #popup-gutters, #popup-crawl, #popup-foundation, #popup-air {
     display: none; 
     max-width: 100%; 
     position: fixed;
@@ -123,7 +126,8 @@ h1 {
  border-radius: 10px; 
 }
 
-.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-crawl {
+.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-crawl, .svg-popup-grid-foundation, 
+.svg-popup-grid-air {
     position: absolute;
     top: 0; 
     left: 0; 
@@ -135,23 +139,26 @@ h1 {
     pointer-events: none; 
 }
 
-.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl {
+.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl, 
+.svg-popup-wrap-foundation, .svg-popup-wrap-air {
     width: auto;
     height: auto;
     object-fit: contain;
     pointer-events: auto; 
 }
-.svg-popup-wrap circle, .svg-popup-wrap-wp-wp circle, .svg-popup-wrap-gutters circle, .svg-popup-wrap-crawl circle{
+.svg-popup-wrap circle, .svg-popup-wrap-wp-wp circle, .svg-popup-wrap-gutters circle, 
+.svg-popup-wrap-crawl circle, .svg-popup-wrap-foundation circle, .svg-popup-wrap-air circle{
     stroke: rgb(243, 121, 141); 
     stroke-width: 1px; 
 }
-.svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle, .svg-popup-wrap-gutters:hover circle, .svg-popup-wrap-crawl:hover circle{
+.svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle, .svg-popup-wrap-gutters:hover circle, 
+.svg-popup-wrap-crawl:hover circle, .svg-popup-wrap-foundation:hover circle, .svg-popup-wrap-air:hover circle {
     fill: rgb(243, 121, 141); 
     cursor:pointer; 
     stroke:#015eb8; 
 }
 
-button#close, button#close-wp, button#close-gutters, button#close-crawl {
+button#close, button#close-wp, button#close-gutters, button#close-crawl, button#close-foundation, button#close-air {
     position: absolute;
     top: 10px;
     left: 10px; 
@@ -165,7 +172,8 @@ button#close, button#close-wp, button#close-gutters, button#close-crawl {
     z-index: 1;
 }
 
-button#close:hover, button#close-wp:hover, button#close-gutters:hover, button#close-crawl:hover{
+button#close:hover, button#close-wp:hover, button#close-gutters:hover, button#close-crawl:hover, 
+button#close-foundation:hover, #button#close-air:hover {
     color: white;
     background: #333;
 }
@@ -175,7 +183,7 @@ button#close:hover, button#close-wp:hover, button#close-gutters:hover, button#cl
     grid-column: 9;
     grid-row: 9; 
 }
-.svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl {
+.svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl, .svg-popup-wrap-foundation, .svg-popup-wrap-air {
     grid-column: 9;
     grid-row: 9; 
 }
@@ -192,7 +200,7 @@ button#close:hover, button#close-wp:hover, button#close-gutters:hover, button#cl
     pointer-events: none;
 }
 
-.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl {
+.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl, .svg-popup-wrap-foundation, .svg-popup-wrap-air {
     position: relative; 
     width: auto;
     height: auto;
@@ -200,13 +208,16 @@ button#close:hover, button#close-wp:hover, button#close-gutters:hover, button#cl
     pointer-events: auto;
 }
 
-.svg-popup-wrap circle, .svg-popup-wrap-wp circle{
+.svg-popup-wrap circle, .svg-popup-wrap-wp circle, 
+.svg-popup-wrap-gutters circle, .svg-popup-wrap-crawl circle, 
+.svg-popup-wrap-foundation circle, .svg-popup-wrap-air circle{
     stroke: rgb(243, 121, 141);
     stroke-width: 1px;
 }
 
 
-.speech-bubble, .speech-bubble-wp, .speech-bubble-gutters, .speech-bubble-crawl {
+.speech-bubble, .speech-bubble-wp, .speech-bubble-gutters, 
+.speech-bubble-crawl, .speech-bubble-foundation, .speech-bubble-air {
     position: absolute;
     display: none;
     width: 200px;
@@ -224,7 +235,9 @@ button#close:hover, button#close-wp:hover, button#close-gutters:hover, button#cl
 .svg-popup-wrap:hover .speech-bubble, 
 .svg-popup-wrap-wp:hover .speech-bubble-wp, 
 .svg-popup-wrap-gutters:hover .speech-bubble-gutters, 
-.svg-popup-wrap-crawl, .svg-popup-wrap-crawl:hover .speech-bubble-crawl {   
+.svg-popup-wrap-crawl, .svg-popup-wrap-crawl:hover .speech-bubble-crawl, 
+.svg-popup-wrap-foundation:hover, .speech-bubble-foundation, 
+.svg-popup-wrap-air:hover, .speech-bubble-air {   
     display: block;
 }
 
@@ -261,15 +274,16 @@ button#close:hover, button#close-wp:hover, button#close-gutters:hover, button#cl
     transition: opacity 5s ease; 
 }
 
-#nextPopup, #next-popup-wp {
+#nextPopup, #next-popup-wp, #next-popup-gutters, #next-popup-crawl, #next-popup-foundation, #next-popup-air {
     display: none; 
 }
 #quiz-popup, #quiz-popup-wp, #popup-wp, #quiz-popup-gutters, #share_button,
- #share_button_wp, #share_button_gutters, #share_button_crawl, #quiz-popup-crawl{
+ #share_button_wp, #share_button_gutters, #share_button_crawl, #quiz-popup-crawl, 
+  #quiz-popup-foundation, #share_button_foundation, #quiz-popup-air, #share_button_air {
     display: none;  
 }
 
-.quiz-content, .quiz-content-wp, .quiz-content-gutters, .quiz-content-crawl {
+.quiz-content, .quiz-content-wp, .quiz-content-gutters, .quiz-content-crawl, .quiz-content-foundation, .quiz-content-air {
     position: fixed; 
     top: 50%;
     left: 50%;
