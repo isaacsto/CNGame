@@ -87,6 +87,7 @@ h1 {
     left: 50%; 
     transform: translateX(-50%); 
     pointer-events: auto; 
+    font-weight: 600;   
 }
 
 .svg-wrap:hover .label {
@@ -235,9 +236,9 @@ button#close-foundation:hover, #button#close-air:hover {
 .svg-popup-wrap:hover .speech-bubble, 
 .svg-popup-wrap-wp:hover .speech-bubble-wp, 
 .svg-popup-wrap-gutters:hover .speech-bubble-gutters, 
-.svg-popup-wrap-crawl, .svg-popup-wrap-crawl:hover .speech-bubble-crawl, 
-.svg-popup-wrap-foundation:hover, .speech-bubble-foundation, 
-.svg-popup-wrap-air:hover, .speech-bubble-air {   
+.svg-popup-wrap-crawl:hover .speech-bubble-crawl, 
+.svg-popup-wrap-foundation:hover .speech-bubble-foundation, 
+.svg-popup-wrap-air:hover .speech-bubble-air {   
     display: block;
 }
 
