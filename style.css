@@ -77,7 +77,7 @@ h1 {
 
 }
 
-#popup, #popup-wp {
+#popup, #popup-wp, #popup-gutters {
     display: none; 
     max-width: 100%; 
     position: fixed;
@@ -111,7 +111,7 @@ h1 {
  border-radius: 10px; 
 }
 
-.svg-popup-grid, .svg-popup-grid-wp {
+.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters {
     position: absolute;
     top: 0; 
     left: 0; 
@@ -123,23 +123,23 @@ h1 {
     pointer-events: none; 
 }
 
-.svg-popup-wrap, .svg-popup-wrap-wp {
+.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters {
     width: auto;
     height: auto;
     object-fit: contain;
     pointer-events: auto; 
 }
-.svg-popup-wrap circle, .svg-popup-wrap-wp-wp circle {
+.svg-popup-wrap circle, .svg-popup-wrap-wp-wp circle, .svg-popup-wrap-gutters circle{
     stroke: rgb(243, 121, 141); 
     stroke-width: 1px; 
 }
-.svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle {
+.svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle, .svg-popup-wrap-gutters:hover circle {
     fill: rgb(243, 121, 141); 
     cursor:pointer; 
     stroke:#015eb8; 
 }
 
-button#close, button#close-wp {
+button#close, button#close-wp, button#close-gutters {
     position: absolute;
     top: 10px;
     left: 10px; 
@@ -163,7 +163,7 @@ button#close:hover, button#close-wp:hover {
     grid-column: 9;
     grid-row: 9; 
 }
-.svg-popup-wrap-wp {
+.svg-popup-wrap-wp, .svg-popup-wrap-gutters {
     grid-column: 9;
     grid-row: 9; 
 }
@@ -180,7 +180,7 @@ button#close:hover, button#close-wp:hover {
     pointer-events: none;
 }
 
-.svg-popup-wrap, .svg-popup-wrap-wp {
+.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters {
     position: relative; 
     width: auto;
     height: auto;
@@ -194,7 +194,7 @@ button#close:hover, button#close-wp:hover {
 }
 
 
-.speech-bubble, .speech-bubble-wp, .label {
+.speech-bubble, .speech-bubble-wp, .speech-bubble-gutters, .label {
     position: absolute;
     display: none;
     width: 200px;
@@ -209,7 +209,7 @@ button#close:hover, button#close-wp:hover {
     transform: translateX(-50%); 
 }
 
-.svg-popup-wrap:hover .speech-bubble, .svg-popup-wrap-wp:hover .speech-bubble-wp{
+.svg-popup-wrap:hover .speech-bubble, .svg-popup-wrap-wp:hover .speech-bubble-wp, .svg-popup-wrap-gutters:hover .speech-bubble-gutters{
     display: block;
 }
 
@@ -249,11 +249,11 @@ button#close:hover, button#close-wp:hover {
 #nextPopup, #next-popup-wp {
     display: none; 
 }
-#quiz-popup, #quiz-popup-wp, #popup-wp, #share_button, #share_button_wp {
+#quiz-popup, #quiz-popup-wp, #popup-wp, #quiz-popup-gutters, #share_button, #share_button_wp, #share_button_gutters {
     display: none;  
 }
 
-.quiz-content, .quiz-content-wp {
+.quiz-content, .quiz-content-wp, .quiz-content-gutters {
     position: fixed; 
     top: 50%;
     left: 50%;
