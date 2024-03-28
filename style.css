@@ -179,15 +179,26 @@ button#close-foundation:hover, #button#close-air:hover {
     background: #333;
 }
 
-.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl, .svg-popup-wrap-foundation, .svg-popup-wrap-air {
+.svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, .svg-popup-wrap-crawl, .svg-popup-wrap-foundation {
     grid-column: 9;
     grid-row: 9; 
 }
-.svg-popup-wrap-air.one {
-    grid-column: 1;
-    grid-row: 2; 
+.svg-popup-wrap-air{
+    grid-column: 9;
+    grid-row: 11; 
 }
-
+.svg-popup-wrap-air.one {
+    grid-column: 9;
+    grid-row: 8; 
+}
+.svg-popup-wrap-air.two {
+    grid-column: 9;
+    grid-row: 3; 
+}
+.svg-popup-wrap-air.three {
+    grid-column: 10;
+    grid-row: 14; 
+}
 .svg-popup-grid {
     position: absolute;
     top: 0;
