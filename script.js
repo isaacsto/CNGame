@@ -93,7 +93,7 @@ function openBasementFinishing() {
 const popupImage = document.getElementById("popup-image-finishing");
 const changePhotoButton = document.getElementById("changePhoto");
 const backPhotoButton = document.getElementById("backPhoto");
-const svgGrid = document.querySelector(".svg-popup-wrap");
+const svgGrid = document.querySelector(".svg-popup-grid");
 
 const imageUrls = [
     "/CNProjects/CNGame/assets/01_finished_basement_set_7_before_rid_6822_rid.jpg",
@@ -176,7 +176,7 @@ function openBasementWaterproofing() {
     const popupImage = document.getElementById("popup-image-wp");
     const changePhotoButton = document.getElementById("changePhoto-wp");
     const backPhotoButton = document.getElementById("backPhoto-wp");
-    const svgGrid = document.querySelector(".svg-popup-wrap-wp");
+    const svgGrid = document.querySelector(".svg-popup-grid-wp");
     
     const imageUrls = [
         "/CNProjects/CNGame/assets/waterguard_east_haven_before.jpg",
@@ -259,7 +259,7 @@ function openGutters() {
     const popupImage = document.getElementById("popup-image-gutters");
     const changePhotoButton = document.getElementById("changePhoto-gutters");
     const backPhotoButton = document.getElementById("backPhoto-gutters");
-    const svgGrid = document.querySelector(".svg-popup-wrap-gutters");
+    const svgGrid = document.querySelector(".svg-popup-grid-gutters");
     
     const imageUrls = [
         "/CNProjects/CNGame/assets/gutters_before.png", 
@@ -342,7 +342,7 @@ function openCrawlSpace() {
     const popupImage = document.getElementById("popup-image-crawl");
     const changePhotoButton = document.getElementById("changePhoto-crawl");
     const backPhotoButton = document.getElementById("backPhoto-crawl");
-    const svgGrid = document.querySelector(".svg-popup-wrap-crawl");
+    const svgGrid = document.querySelector(".svg-popup-grid-crawl");
     
     const imageUrls = [
         "/CNProjects/CNGame/assets/crawl-space-before.jpg",
@@ -425,7 +425,7 @@ function openFoundation() {
     const popupImage = document.getElementById("popup-image-foundation");
     const changePhotoButton = document.getElementById("changePhoto-foundation");
     const backPhotoButton = document.getElementById("backPhoto-foundation");
-    const svgGrid = document.querySelector(".svg-popup-wrap-foundation");
+    const svgGrid = document.querySelector(".svg-popup-grid-foundation");
     
     const imageUrls = [
         "/CNProjects/CNGame/assets/foundation_before.jpg",
@@ -508,7 +508,7 @@ function openAir() {
     const popupImage = document.getElementById("popup-image-air");
     const changePhotoButton = document.getElementById("changePhoto-air");
     const backPhotoButton = document.getElementById("backPhoto-air");
-    const svgGrid = document.querySelector(".svg-popup-wrap-air");
+    const svgGrid = document.querySelector(".svg-popup-grid-air");
     
     const imageUrls = [
         "/CNProjects/CNGame/assets/AirFilters.jpg",
@@ -568,7 +568,7 @@ function openAir() {
             }
         }
     });
-    document.getElementById("quiz-form-wp").addEventListener("submit", showButton )
+    document.getElementById("quiz-form-air").addEventListener("submit", showButton )
     
     function showButton() {
         document.getElementById("share_button_air").style.display = "block";
