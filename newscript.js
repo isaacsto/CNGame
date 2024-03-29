@@ -517,8 +517,8 @@ function openAir() {
     const singleSvg = document.querySelector(".single-svg");
     
     const imageUrls = [
-        "https://cdn.treehouseinternetgroup.com/cms_images/7/airfiltermodel.jpg",
-        "https://cdn.treehouseinternetgroup.com/cms_images/7/airfilter_breakdown.jpg", 
+        "https://cdn.treehouseinternetgroup.com/cms_images/7/airfilter_model.jpg",
+        "https://cdn.treehouseinternetgroup.com/cms_images/7/filter_breakdown.jpg", 
     ];
     currentImageIndex = 0; 
     
