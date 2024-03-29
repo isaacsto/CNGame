@@ -1,5 +1,6 @@
 let currentImageIndex = 0;
 
+//eventlisteners to call functions to open or close popups 
 document.getElementById("finishing").addEventListener("click", openBasementFinishing);
 document.getElementById("water-proofing").addEventListener("click", openBasementWaterproofing);
 document.getElementById("gutters").addEventListener("click", openGutters);
@@ -83,13 +84,15 @@ function closePopupFoundation() {
     location.reload();
 }
 
+//openBasementFinishing is commented the other functions are the same
 function openBasementFinishing() {
+    // logic to open popup 
     const popup = document.getElementById("popup");
     popup.style.display = "block";
     document.body.classList.add("popup-active");
     document.getElementById("overlay").style.display = "block";
  
-
+// get elements by ids 
 const popupImage = document.getElementById("popup-image-finishing");
 const changePhotoButton = document.getElementById("changePhoto");
 const backPhotoButton = document.getElementById("backPhoto");
@@ -101,6 +104,7 @@ const imageUrls = [
 ];
 let currentImageIndex = 0; 
 
+// handles next and back buttons / image behavior 
 backPhotoButton.style.display = "none";
 const nextPopupButton = document.getElementById("nextPopup");
 
@@ -130,6 +134,7 @@ backPhotoButton.addEventListener("click", function() {
     }, 100);
 }
 });
+//handles quiz display and behavior 
 const popupQuiz= document.getElementById("quiz-popup");
 
 nextPopupButton.addEventListener("click", function() {
@@ -154,7 +159,7 @@ quizForm.addEventListener("submit", function(event) {
     }
 });
 document.getElementById("quiz-form-finishing").addEventListener("submit", showButton )
-
+//show share button at end of quiz 
 function showButton() {
     document.getElementById("share_button").style.display = "block";
 }
@@ -428,8 +433,8 @@ function openFoundation() {
     const svgGrid = document.querySelector(".svg-popup-grid-foundation");
     
     const imageUrls = [
-        "https://cdn.treehouseinternetgroup.com/cms_images/7/foundationbefore.jpg",
-        "https://cdn.treehouseinternetgroup.com/cms_images/7/foundationafter.jpg", 
+        "https://cdn.treehouseinternetgroup.com/cms_images/7/badfoundation.jpg",
+        "https://cdn.treehouseinternetgroup.com/cms_images/7/smartjackbasement.jpeg", 
     ];
     currentImageIndex = 0; 
     

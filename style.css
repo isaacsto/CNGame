@@ -93,7 +93,7 @@ h1 {
 .svg-wrap:hover .label {
     display: block; 
 }
-
+/* start popup styles  */
 #popup, #popup-wp, #popup-gutters, #popup-crawl, #popup-foundation, #popup-air {
     display: none; 
     max-width: 100%; 
@@ -104,7 +104,6 @@ h1 {
     background-color: white; 
     z-index: 1000;  
 }
-
 #popupContent {
     position: fixed; 
     top: 50%;
@@ -119,7 +118,6 @@ h1 {
     border-radius: 20px;  
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
 }
-
 #popupContent img {
  width: 900px; 
  height:800px; 
@@ -127,6 +125,7 @@ h1 {
  border-radius: 10px; 
 }
 
+/* styles for svgs within popup */
 .svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-crawl, .svg-popup-grid-foundation, 
 .svg-popup-grid-air, .single-svg {
     position: absolute;
@@ -183,6 +182,7 @@ button#close-foundation:hover, #button#close-air:hover {
     background: #333;
 }
 
+/* places the popup svgs in their positions on the grid */
 .svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, 
 .svg-popup-wrap-crawl, .svg-popup-wrap-foundation, .single-svg-wrap {
     grid-column: 9;
@@ -208,6 +208,23 @@ button#close-foundation:hover, #button#close-air:hover {
     grid-column: 10;
     grid-row: 14; 
 }
+.svg-popup-wrap-foundation {
+    grid-column: 9;
+    grid-row: 11; 
+}
+.svg-popup-wrap-foundation.one {
+    grid-column: 9;
+    grid-row: 8; 
+}
+.svg-popup-wrap-foundation.two {
+    grid-column: 9;
+    grid-row: 3; 
+}
+.svg-popup-wrap-foundation.three {
+    grid-column: 10;
+    grid-row: 14; 
+}
+
 .svg-popup-grid, .single-svg {
     position: absolute;
     top: 0;
@@ -238,7 +255,7 @@ button#close-foundation:hover, #button#close-air:hover {
     stroke-width: 1px;
 }
 
-
+/* styles for info tabs that show up on hover */
 .speech-bubble, .speech-bubble-wp, .speech-bubble-gutters, 
 .speech-bubble-crawl, .speech-bubble-foundation, .speech-bubble-air, 
 .single-svg-wrap .speech-bubble-air {
@@ -295,13 +312,16 @@ button#close-foundation:hover, #button#close-air:hover {
     display: none;
 }
 
-#popup-image-finishing {
+/* default styles for second images */
+#popup-image-finishing, #popup-image-air, #popup-image-foundation, #popup-image-gutters, #popup-image-crawl, #popup-image-wp {
     transition: opacity 5s ease; 
 }
 
 #nextPopup, #next-popup-wp, #next-popup-gutters, #next-popup-crawl, #next-popup-foundation, #next-popup-air {
     display: none; 
 }
+
+/* styles for quiz  */
 #quiz-popup, #quiz-popup-wp, #popup-wp, #quiz-popup-gutters, #share_button,
  #share_button_wp, #share_button_gutters, #share_button_crawl, #quiz-popup-crawl, 
   #quiz-popup-foundation, #share_button_foundation, #quiz-popup-air, #share_button_air {
@@ -342,6 +362,7 @@ label {
     display: none; 
 }
 
+/* styles for submit or get quote buttons or share button  */
 .links {
     display: flex; 
     width: 100%;
