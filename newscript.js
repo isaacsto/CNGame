@@ -357,6 +357,7 @@ function openCrawlSpace() {
     
     backPhotoButton.style.display = "none";
     const nextPopupButton = document.getElementById("next-popup-crawl");
+
     
     changePhotoButton.addEventListener("click", function() {
         if (currentImageIndex < imageUrls.length - 1) {
@@ -370,6 +371,7 @@ function openCrawlSpace() {
         }, 100);
         changePhotoButton.style.display = "none";
         nextPopupButton.style.display = "inline-block";
+     
     }
     
     });
