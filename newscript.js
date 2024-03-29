@@ -590,3 +590,35 @@ function openAir() {
     });
     
 }
+
+
+//just close quiz functions 
+function closeQuizAir() {
+    document.getElementById("quiz-popup-air").style.display = "none";
+}
+document.getElementById("close-quiz-air").addEventListener("click", closeQuizAir);
+
+function closeQuizFoundation() {
+    document.getElementById("quiz-popup-foundation").style.display = "none";
+}
+document.getElementById("close-quiz-foundation").addEventListener("click", closeQuizFoundation);
+
+function closeQuizCrawlSpace() {
+    document.getElementById("quiz-popup-crawl").style.display = "none";
+}
+document.getElementById("close-quiz-crawl").addEventListener("click", closeQuizCrawlSpace);
+
+function closeQuizGutters() {
+    document.getElementById("quiz-popup-gutters").style.display = "none";
+}
+document.getElementById("close-quiz-gutters").addEventListener("click", closeQuizGutters);
+
+function closeQuizWaterProofing() {
+    document.getElementById("quiz-popup-wp").style.display = "none";
+}
+document.getElementById("close-quiz-wp").addEventListener("click", closeQuizWaterProofing);
+
+function closeQuizFinishing() {
+    document.getElementById("quiz-popup-finishing").style.display = "none";
+}
+document.getElementById("close-quiz-finishing").addEventListener("click", closeQuizFinishing);

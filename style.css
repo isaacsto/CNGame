@@ -161,26 +161,19 @@ h1 {
 }
 
 button#close, button#close-wp, button#close-gutters, button#close-crawl, 
-button#close-foundation, button#close-air {
+button#close-foundation, button#close-air, .close-quiz {
     position: absolute;
     top: 10px;
-    left: 10px; 
-    background: rgb(228, 227, 227);
-    border: 1px solid #333;
+    left: 10px;
     cursor: pointer;
-    font-size: 20px;
-    color: #333;
-    outline: none;
-    font-weight: 800;
-    z-index: 1;
+    background: white;
+    border: none;
+    font-size: 16px;
+    color: #888;
+    border-radius: 3px; 
 }
 
-button#close:hover, button#close-wp:hover, button#close-gutters:hover, 
-button#close-crawl:hover, 
-button#close-foundation:hover, #button#close-air:hover {
-    color: white;
-    background: #333;
-}
+
 
 /* places the popup svgs in their positions on the grid */
 .svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, 
@@ -411,3 +404,5 @@ h2 {
     border-radius: 5px; 
     cursor: pointer;
 }
+
+
