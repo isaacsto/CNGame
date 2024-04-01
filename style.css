@@ -4,18 +4,21 @@
 
 h1 {
     font-size: 2.5rem; 
-    color: #0b4882; 
+    color: #005eb8; 
     font-weight: 600; 
     font-family: 'tg-adventor-bold', 'Adjusted Arial Bold Fallback', sans-serif; 
 }
 .heading {
-    display: flex; 
-    justify-content: space-between;
+  
     font-family: tg-adventor-bold, adjusted arial bold fallback, sans-serif;
     padding: 20px; 
+    text-align: center;
 }
-.heading img {
+
+.logo img {
     max-width: 300px; 
+    display: flex; 
+    justify-content: flex-end; 
 }
 h2 {
     font-size: 1.5rem; 
