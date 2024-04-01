@@ -153,6 +153,7 @@ quizForm.addEventListener("submit", function(event) {
         const answer = selectedAnswer.value;
         if (answer === "d") {
             resultText.textContent = "Correct! Do you want to share this on Facebook?";
+            resultText.classList.add("correct");
         } else {
             resultText.textContent = "Sorry, try again!";
         }
@@ -182,6 +183,8 @@ function openBasementWaterproofing() {
     const changePhotoButton = document.getElementById("changePhoto-wp");
     const backPhotoButton = document.getElementById("backPhoto-wp");
     const svgGrid = document.querySelector(".svg-popup-grid-wp");
+    const singleSvg = document.querySelector(".single-svg-wp");
+    
     
     const imageUrls = [
         "https://cdn.treehouseinternetgroup.com/cms_images/7/waterproofbefore.jpg",
@@ -191,6 +194,7 @@ function openBasementWaterproofing() {
     
     backPhotoButton.style.display = "none";
     const nextPopupButton = document.getElementById("next-popup-wp");
+    svgGrid.classList.add("hide"); 
     
     changePhotoButton.addEventListener("click", function() {
         if (currentImageIndex < imageUrls.length - 1) {
@@ -204,6 +208,8 @@ function openBasementWaterproofing() {
         }, 100);
         changePhotoButton.style.display = "none";
         nextPopupButton.style.display = "inline-block";
+        svgGrid.classList.remove("hide");
+        singleSvg.classList.add("hide"); 
     }
     
     });
@@ -216,6 +222,8 @@ function openBasementWaterproofing() {
         setTimeout(() => {
             popupImage.style.opacity = 1;
         }, 100);
+        svgGrid.classList.add("hide"); 
+        singleSvg.classList.remove("hide");
     }
     });
     const popupQuiz= document.getElementById("quiz-popup-wp");
@@ -236,6 +244,7 @@ function openBasementWaterproofing() {
             const answer = selectedAnswer.value;
             if (answer === "d") {
                 resultText.textContent = "Correct! Do you want to share this on Facebook?";
+                resultText.classList.add("correct");
             } else {
                 resultText.textContent = "Sorry, try again!";
             }
@@ -319,6 +328,7 @@ function openGutters() {
             const answer = selectedAnswer.value;
             if (answer === "d") {
                 resultText.textContent = "Correct! Do you want to share this on Facebook?";
+                resultText.classList.add("correct");
             } else {
                 resultText.textContent = "Sorry, try again!";
             }
@@ -357,7 +367,7 @@ function openCrawlSpace() {
     
     backPhotoButton.style.display = "none";
     const nextPopupButton = document.getElementById("next-popup-crawl");
-
+  
     
     changePhotoButton.addEventListener("click", function() {
         if (currentImageIndex < imageUrls.length - 1) {
@@ -371,7 +381,7 @@ function openCrawlSpace() {
         }, 100);
         changePhotoButton.style.display = "none";
         nextPopupButton.style.display = "inline-block";
-     
+
     }
     
     });
@@ -404,12 +414,13 @@ function openCrawlSpace() {
             const answer = selectedAnswer.value;
             if (answer === "d") {
                 resultText.textContent = "Correct! Do you want to share this on Facebook?";
+                resultText.classList.add("correct");
             } else {
                 resultText.textContent = "Sorry, try again!";
             }
         }
     });
-    document.getElementById("quiz-form-wp").addEventListener("submit", showButton )
+    document.getElementById("quiz-form-crawl").addEventListener("submit", showButton )
     
     function showButton() {
         document.getElementById("share_button_crawl").style.display = "block";
@@ -487,6 +498,7 @@ function openFoundation() {
             const answer = selectedAnswer.value;
             if (answer === "d") {
                 resultText.textContent = "Correct! Do you want to share this on Facebook?";
+                resultText.classList.add("correct");
             } else {
                 resultText.textContent = "Sorry, try again!";
             }
@@ -574,6 +586,7 @@ function openAir() {
             const answer = selectedAnswer.value;
             if (answer === "d") {
                 resultText.textContent = "Correct! Do you want to share this on Facebook?";
+                resultText.classList.add("correct");
             } else {
                 resultText.textContent = "Sorry, try again!";
             }
@@ -592,7 +605,6 @@ function openAir() {
     });
     
 }
-
 
 //just close quiz functions 
 function closeQuizAir() {
@@ -621,6 +633,6 @@ function closeQuizWaterProofing() {
 document.getElementById("close-quiz-wp").addEventListener("click", closeQuizWaterProofing);
 
 function closeQuizFinishing() {
-    document.getElementById("quiz-popup-finishing").style.display = "none";
+    document.getElementById("quiz-popup").style.display = "none";
 }
 document.getElementById("close-quiz-finishing").addEventListener("click", closeQuizFinishing);
