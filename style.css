@@ -220,8 +220,8 @@ h2 {
 }
 
 /* styles for svgs within popup */
-.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-crawl, .svg-popup-grid-foundation, 
-.svg-popup-grid-foundation-second-slide, .svg-popup-grid-air, .single-svg, .single-svg-wp {
+.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-crawl, .svg-popup-grid-crawl-second-slide .svg-popup-grid-foundation, 
+.svg-popup-grid-foundation-second-slide, .svg-popup-grid-air, .single-svg, .single-svg-wp, .svg-popup-grid-crawl-second-slide {
     position: absolute;
     top: 0; 
     left: 0; 
@@ -348,11 +348,11 @@ button#close-foundation, button#close-air, .close-quiz {
 }
 .svg-popup-wrap-gutters.one {
     grid-column: 17;
-    grid-row: 2; 
+    grid-row: 3; 
 }
 .svg-popup-wrap-gutters.two {
     grid-column: 16;
-    grid-row: 3; 
+    grid-row: 4; 
 }
 .svg-popup-wrap-gutters.three {
     grid-column: 15;
@@ -373,6 +373,10 @@ button#close-foundation, button#close-air, .close-quiz {
 .svg-popup-wrap-crawl.three {
     grid-column: 10;
     grid-row: 14; 
+}
+.svg-popup-wrap-crawl.four {
+    grid-column: 9;
+    grid-row: 9; 
 }
 /*finishing*/ 
 .svg-popup-wrap {

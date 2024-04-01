@@ -358,6 +358,7 @@ function openCrawlSpace() {
     const changePhotoButton = document.getElementById("changePhoto-crawl");
     const backPhotoButton = document.getElementById("backPhoto-crawl");
     const svgGrid = document.querySelector(".svg-popup-grid-crawl");
+    const svgGridTwo = document.querySelector(".svg-popup-grid-crawl-second-slide");
     
     const imageUrls = [
         "https://cdn.treehouseinternetgroup.com/cms_images/7/unfinishedcrawlspace.jpg",
@@ -367,7 +368,8 @@ function openCrawlSpace() {
     
     backPhotoButton.style.display = "none";
     const nextPopupButton = document.getElementById("next-popup-crawl");
-  
+    
+    svgGridTwo.classList.add("hide");
     
     changePhotoButton.addEventListener("click", function() {
         if (currentImageIndex < imageUrls.length - 1) {
@@ -381,7 +383,7 @@ function openCrawlSpace() {
         }, 100);
         changePhotoButton.style.display = "none";
         nextPopupButton.style.display = "inline-block";
-
+        svgGridTwo.classList.remove("hide");
     }
     
     });
@@ -394,6 +396,7 @@ function openCrawlSpace() {
         setTimeout(() => {
             popupImage.style.opacity = 1;
         }, 100);
+        svgGridTwo.classList.add("hide");
     }
     });
     const popupQuiz= document.getElementById("quiz-popup-crawl");
