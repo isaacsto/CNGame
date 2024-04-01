@@ -46,9 +46,3 @@ Welcome to Contractor Nation's Trivia Game! This interactive game allows players
 
 - Developed for Contractor Nation
 
-## Feedback and Support
-
-For feedback, issues, or support, please contact istofko@contractornation.com
-
-Enjoy the game!
-
