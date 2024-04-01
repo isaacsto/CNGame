@@ -444,6 +444,7 @@ function openFoundation() {
     const changePhotoButton = document.getElementById("changePhoto-foundation");
     const backPhotoButton = document.getElementById("backPhoto-foundation");
     const svgGrid = document.querySelector(".svg-popup-grid-foundation");
+    const svgGridTwo = document.querySelector(".svg-popup-grid-foundation-second-slide");
     
     const imageUrls = [
         "https://cdn.treehouseinternetgroup.com/cms_images/7/badfoundation.jpg",
@@ -453,6 +454,7 @@ function openFoundation() {
     
     backPhotoButton.style.display = "none";
     const nextPopupButton = document.getElementById("next-popup-foundation");
+    svgGridTwo.classList.add("hide"); 
     
     changePhotoButton.addEventListener("click", function() {
         if (currentImageIndex < imageUrls.length - 1) {
@@ -466,6 +468,7 @@ function openFoundation() {
         }, 100);
         changePhotoButton.style.display = "none";
         nextPopupButton.style.display = "inline-block";
+        svgGridTwo.classList.remove("hide"); 
     }
     
     });
@@ -473,11 +476,12 @@ function openFoundation() {
         if (currentImageIndex > 0) {
         currentImageIndex--;
         popupImage.src = imageUrls[currentImageIndex];
-        svgGrid.classList.add("hide");
+        svgGridTwo.classList.add("hide");
         popupImage.style.opacity = 0;
         setTimeout(() => {
             popupImage.style.opacity = 1;
         }, 100);
+        svgGridTwo.classList.add("hide"); 
     }
     });
     const popupQuiz= document.getElementById("quiz-popup-foundation");
