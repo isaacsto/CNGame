@@ -316,7 +316,6 @@ button#close-foundation, button#close-air, .close-quiz {
     grid-row: 8; 
 }
 
-
 .svg-popup-wrap-wp{
     grid-column: 12;
     grid-row: 4; 
@@ -343,8 +342,8 @@ button#close-foundation, button#close-air, .close-quiz {
     grid-row: 3; 
 }
 .svg-popup-wrap-gutters.three {
-    grid-column: 10;
-    grid-row: 14; 
+    grid-column: 15;
+    grid-row: 17; 
 }
 .svg-popup-wrap-crawl{
     grid-column: 9;
