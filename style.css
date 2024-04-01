@@ -3,16 +3,32 @@
 }
 
 h1 {
-    font-size: 30px; 
-    padding: 10px; 
+    font-size: 2.5rem; 
     color: #0b4882; 
     font-weight: 600; 
     font-family: 'tg-adventor-bold', 'Adjusted Arial Bold Fallback', sans-serif; 
 }
+.heading {
+    display: flex; 
+    justify-content: space-between;
+    font-family: tg-adventor-bold, adjusted arial bold fallback, sans-serif;
+    padding: 20px; 
+}
+
+h2 {
+    font-size: 1.5rem; 
+}
+
+.container-wrap {
+    max-width: 100%; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
 
 .container {
     position: relative;
-    width: 100%;
+    width: 1400px; 
 }
 
 .container img {
@@ -34,16 +50,16 @@ h1 {
 }
 
 #gutters {
-    grid-column: 3; 
-    grid-row: 7; 
+    grid-column: 4; 
+    grid-row: 8; 
 }
 #crawl-space {
     grid-column: 4; 
-    grid-row: 12; 
+    grid-row: 13; 
 }
 #water-proofing {
     grid-column: 16; 
-    grid-row: 13;
+    grid-row: 14;
 }
 #foundation {
     grid-column: 6; 
@@ -51,11 +67,11 @@ h1 {
 }
 #finishing {
     grid-column: 12; 
-    grid-row: 13; 
+    grid-row: 14; 
 }
 #air-purifier {
-    grid-column: 11; 
-    grid-row:11; 
+    grid-column: 12; 
+    grid-row:12; 
 }
 .svg-wrap {
     position: relative; 
@@ -482,3 +498,4 @@ h2 {
     color: green; 
     font-weight: 600; 
 }
+
