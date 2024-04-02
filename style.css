@@ -220,7 +220,8 @@ h2 {
 }
 
 /* styles for svgs within popup */
-.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-crawl,
+.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-gutters-two, 
+.svg-popup-grid-crawl,
  .svg-popup-grid-crawl-second-slide, .svg-popup-grid-foundation, 
 .svg-popup-grid-air, .single-svg, .single-svg-wp, 
 .svg-popup-grid-crawl-second-slide, .svg-popup-grid-foundation-second-slide {
@@ -250,7 +251,7 @@ h2 {
 }
 .svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle, .svg-popup-wrap-gutters:hover circle, 
 .svg-popup-wrap-crawl:hover circle, .svg-popup-wrap-foundation:hover circle, 
-.svg-popup-wrap-air:hover circle, .single-svg-wrap:hover circle, .single-svg-wrap-wp:hover circle, {
+.svg-popup-wrap-air:hover circle, .single-svg-wrap:hover circle, .single-svg-wrap-wp:hover circle {
     fill: rgb(243, 121, 141); 
     cursor:pointer; 
     stroke:#015eb8; 
@@ -274,10 +275,6 @@ button#close-foundation, button#close-air, .close-quiz {
 /* places the popup svgs in their positions on the grid */
 .svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, 
 .svg-popup-wrap-crawl, .svg-popup-wrap-foundation, .single-svg-wrap {
-    grid-column: 9;
-    grid-row: 9; 
-}
-.single-svg-wrap-wp {
     grid-column: 9;
     grid-row: 9; 
 }
@@ -337,22 +334,29 @@ button#close-foundation, button#close-air, .close-quiz {
     grid-column: 9;
     grid-row: 12; 
 }
-
+.single-svg-wrap-wp {
+    grid-column: 9;
+    grid-row: 9; 
+}
 .svg-popup-wrap-gutters{
     grid-column: 9;
     grid-row: 9; 
 }
 .svg-popup-wrap-gutters.one {
-    grid-column: 17;
-    grid-row: 3; 
-}
-.svg-popup-wrap-gutters.two {
     grid-column: 16;
     grid-row: 4; 
+}
+.svg-popup-wrap-gutters.two {
+    grid-column: 15;
+    grid-row: 5; 
 }
 .svg-popup-wrap-gutters.three {
     grid-column: 15;
     grid-row: 17; 
+}
+.svg-popup-wrap-gutters.four {
+    grid-column: 9;
+    grid-row: 9; 
 }
 .svg-popup-wrap-crawl{
     grid-column: 9;
@@ -394,7 +398,7 @@ button#close-foundation, button#close-air, .close-quiz {
 
 
 
-.svg-popup-grid, .single-svg, .single-svg-wp {
+.svg-popup-grid, .single-svg, .single-svg-wp, .svg-popup-grid-gutters-two {
     position: absolute;
     top: 0;
     left: 0;

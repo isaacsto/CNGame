@@ -274,6 +274,7 @@ function openGutters() {
     const changePhotoButton = document.getElementById("changePhoto-gutters");
     const backPhotoButton = document.getElementById("backPhoto-gutters");
     const svgGrid = document.querySelector(".svg-popup-grid-gutters");
+    const svgGridTwo = document.querySelector(".svg-popup-grid-gutters-two");
     
     const imageUrls = [
         "https://cdn.treehouseinternetgroup.com/cms_images/7/guttersbefore.jpg", 
@@ -283,6 +284,8 @@ function openGutters() {
     
     backPhotoButton.style.display = "none";
     const nextPopupButton = document.getElementById("next-popup-gutters");
+
+    svgGridTwo.classList.add("hide");
     
     changePhotoButton.addEventListener("click", function() {
         if (currentImageIndex < imageUrls.length - 1) {
@@ -296,6 +299,7 @@ function openGutters() {
         }, 100);
         changePhotoButton.style.display = "none";
         nextPopupButton.style.display = "inline-block";
+        svgGridTwo.classList.remove("hide");
     }
     
     });
@@ -308,6 +312,7 @@ function openGutters() {
         setTimeout(() => {
             popupImage.style.opacity = 1;
         }, 100);
+        svgGridTwo.classList.add("hide");
     }
     });
     const popupQuiz= document.getElementById("quiz-popup-gutters");
