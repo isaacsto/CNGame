@@ -327,7 +327,7 @@ button#close-foundation, button#close-air, .close-quiz {
 }
 .svg-popup-wrap-wp{
     grid-column: 12;
-    grid-row: 5; 
+    grid-row: 7; 
 }
 .svg-popup-wrap-wp.one {
     grid-column: 11;
@@ -376,16 +376,16 @@ button#close-foundation, button#close-air, .close-quiz {
 }
 /*finishing*/ 
 .svg-popup-wrap {
-    grid-column: 9;
-    grid-row: 11; 
+    grid-column: 6;
+    grid-row: 10; 
 }
 .svg-popup-wrap.one {
     grid-column: 9;
     grid-row: 8; 
 }
 .svg-popup-wrap.two {
-    grid-column: 9;
-    grid-row: 3; 
+    grid-column: 12;
+    grid-row: 9; 
 }
 .svg-popup-wrap.three {
     grid-column: 10;
