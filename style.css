@@ -23,6 +23,7 @@ h1 {
 h2 {
     font-size: 1.5rem; 
     text-align: center; 
+    padding: 10px; 
 }
 
 .container-wrap {
@@ -260,7 +261,7 @@ h2 {
 
 button#close, button#close-wp, button#close-gutters, button#close-crawl, 
 button#close-foundation, button#close-air, .close-quiz {
-    position: absolute;
+    position: absolute; 
     top: 10px;
     left: 10px;
     cursor: pointer;
@@ -271,7 +272,16 @@ button#close-foundation, button#close-air, .close-quiz {
     border-radius: 3px; 
 }
 
-
+.top-link {
+    display: flex; 
+    justify-content: flex-end;
+}
+.service-link {
+    text-decoration: none; 
+    color: #005eb8; 
+    font-weight: 600; 
+    font-size: 1rem; 
+}
 
 /* places the popup svgs in their positions on the grid */
 .svg-popup-wrap, .svg-popup-wrap-wp, .svg-popup-wrap-gutters, 
@@ -522,7 +532,7 @@ button#close-foundation, button#close-air, .close-quiz {
     background-repeat: no-repeat;
     background-color: white; 
     border-radius: 20px;  
-    padding: 20px; 
+    padding: 5px 20px; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
