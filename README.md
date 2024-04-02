@@ -20,8 +20,8 @@ Welcome to Contractor Nation's Trivia Game! This interactive game allows players
 6. **Sharing on Facebook**: Share your score or the game link on Facebook using the provided share button.
 
 ## Video Demo : 
+<a href="https://drive.google.com/file/d/1zWviNGSARIHPxU0MyiTMfW09-KxO8iQY/view"></a>
 
-<iframe src="https://drive.google.com/file/d/1zWviNGSARIHPxU0MyiTMfW09-KxO8iQY/preview" width="640" height="480"></iframe>
 
 
 ## Technologies Used
