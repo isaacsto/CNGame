@@ -161,7 +161,7 @@ h2 {
 }
 .svg-wrap circle {
     stroke: rgb(243, 121, 141); 
-    stroke-width: 1px; 
+    stroke-width: 1.5px; 
 }
 .svg-wrap:hover circle {
     fill: rgb(243, 121, 141); 
@@ -249,7 +249,7 @@ h2 {
 .svg-popup-wrap-crawl circle, .svg-popup-wrap-foundation circle, 
 .svg-popup-wrap-air circle, .single-svg-wrap circle, .single-svg-wrap-wp circle{
     stroke: rgb(243, 121, 141); 
-    stroke-width: 1px; 
+    stroke-width: 1.5px; 
 }
 .svg-popup-wrap:hover circle, .svg-popup-wrap-wp:hover circle, .svg-popup-wrap-gutters:hover circle, 
 .svg-popup-wrap-crawl:hover circle, .svg-popup-wrap-foundation:hover circle, 
@@ -440,7 +440,7 @@ button#close-foundation, button#close-air, .close-quiz {
 .svg-popup-wrap-gutters circle, .svg-popup-wrap-crawl circle, 
 .svg-popup-wrap-foundation circle, .svg-popup-wrap-air circle{
     stroke: rgb(243, 121, 141);
-    stroke-width: 1px;
+    stroke-width: 1.5px;
 }
 
 /* styles for info tabs that show up on hover */
