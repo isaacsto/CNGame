@@ -520,7 +520,7 @@ function openFoundation() {
             }
         }
     });
-    document.getElementById("quiz-form-wp").addEventListener("submit", showButton )
+    document.getElementById("quiz-form-foundation").addEventListener("submit", showButton )
     
     function showButton() {
         document.getElementById("share_button_foundation").style.display = "block";
