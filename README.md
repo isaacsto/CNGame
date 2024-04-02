@@ -7,7 +7,7 @@ Welcome to Contractor Nation's Trivia Game: Connecticut Basement Addition! This 
 
 ## Goals and Scope 
 
-The goal of this game is to provide an engaging and appealing way to educate potential leads about CBS services, while providing a streamlined and intuitive interface for users to seek more information, navigate to the free estimate page, or share their experience on social media. 
+The goal of this game is to provide an engaging way to educate potential leads about CBS services, while providing a streamlined and intuitive interface for users to seek more information, navigate to the free estimate page, or share their experience on social media. 
 
 ## How to Play
 
