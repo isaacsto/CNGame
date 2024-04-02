@@ -9,9 +9,8 @@ h1 {
     font-family: 'tg-adventor-bold', 'Adjusted Arial Bold Fallback', sans-serif; 
 }
 .heading {
-  
     font-family: tg-adventor-bold, adjusted arial bold fallback, sans-serif;
-    padding: 20px; 
+    padding: 20px 20px 0; 
     text-align: center;
 }
 
