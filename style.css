@@ -220,7 +220,8 @@ h2 {
 }
 
 /* styles for svgs within popup */
-.svg-popup-grid, .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-gutters-two, 
+.svg-popup-grid, .svg-popup-grid-finishing-two, 
+ .svg-popup-grid-wp, .svg-popup-grid-gutters, .svg-popup-grid-gutters-two, 
 .svg-popup-grid-crawl,
  .svg-popup-grid-crawl-second-slide, .svg-popup-grid-foundation, 
 .svg-popup-grid-air, .single-svg, .single-svg-wp, 
@@ -394,6 +395,10 @@ button#close-foundation, button#close-air, .close-quiz {
 .svg-popup-wrap.three {
     grid-column: 10;
     grid-row: 14; 
+}
+.svg-popup-wrap.four {
+    grid-column: 9;
+    grid-row: 9; 
 }
 
 

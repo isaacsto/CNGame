@@ -97,6 +97,7 @@ const popupImage = document.getElementById("popup-image-finishing");
 const changePhotoButton = document.getElementById("changePhoto");
 const backPhotoButton = document.getElementById("backPhoto");
 const svgGrid = document.querySelector(".svg-popup-grid");
+const svgGridTwo = document.querySelector(".svg-popup-grid-finishing-two");
 
 const imageUrls = [
     "https://cdn.treehouseinternetgroup.com/cms_images/7/unfinished_basement.jpg",
@@ -107,6 +108,7 @@ let currentImageIndex = 0;
 // handles next and back buttons / image behavior 
 backPhotoButton.style.display = "none";
 const nextPopupButton = document.getElementById("nextPopup");
+svgGridTwo.classList.add("hide");
 
 changePhotoButton.addEventListener("click", function() {
     if (currentImageIndex < imageUrls.length - 1) {
@@ -120,6 +122,7 @@ changePhotoButton.addEventListener("click", function() {
     }, 100);
     changePhotoButton.style.display = "none";
     nextPopupButton.style.display = "inline-block";
+    svgGridTwo.classList.remove("hide");
 }
 
 });
@@ -132,6 +135,7 @@ backPhotoButton.addEventListener("click", function() {
     setTimeout(() => {
         popupImage.style.opacity = 1;
     }, 100);
+    svgGridTwo.classList.add("hide");
 }
 });
 //handles quiz display and behavior 
