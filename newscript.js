@@ -459,7 +459,7 @@ function openFoundation() {
     const svgGridTwo = document.querySelector(".svg-popup-grid-foundation-second-slide");
     
     const imageUrls = [
-        "https://cdn.treehouseinternetgroup.com/cms_images/2811/foundation_before.jpg",
+        "https://cdn.treehouseinternetgroup.com/cms_images/2811/dualimage_foundation.jpg",
         "https://cdn.treehouseinternetgroup.com/cms_images/2811/smartjack_after.jpg", 
     ];
     currentImageIndex = 0; 
