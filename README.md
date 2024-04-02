@@ -21,7 +21,7 @@ Welcome to Contractor Nation's Trivia Game! This interactive game allows players
 
 ## Video Demo : 
 
-<a href="https://vimeo.com/930023165"><img src="/CNGame/assets/Screenshot 2024-04-02 160828.png"></a>
+<a href="https://vimeo.com/930023165"><img src="/CNProjects/CNGame/assets/thumbnail-vimeo.jpg"></a>
 
 
 
