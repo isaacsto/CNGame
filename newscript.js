@@ -178,7 +178,8 @@ function showButton() {
 const shareFacebookButton = document.getElementById("share_button");
 shareFacebookButton.addEventListener("click", function() {
     const shareUrl = "https://www.connecticutbasementsystems.com/basement-finishing.html";
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+    const tagline = "I finished the Connecticut Basement Systems Trivia Game"
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(tagline)}`;
     window.open(facebookShareUrl, "_blank");
 });
 
@@ -269,7 +270,8 @@ function openBasementWaterproofing() {
     const shareFacebookButton = document.getElementById("share_button_wp");
     shareFacebookButton.addEventListener("click", function() {
         const shareUrl = "https://www.connecticutbasementsystems.com/basement-finishing.html";
-        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        const tagline = "I finished the Connecticut Basement Systems Trivia Game";
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(tagline)}`;
         window.open(facebookShareUrl, "_blank");
     });
     
@@ -358,7 +360,8 @@ function openGutters() {
     const shareFacebookButton = document.getElementById("share_button_gutters");
     shareFacebookButton.addEventListener("click", function() {
         const shareUrl = "https://www.connecticutbasementsystems.com/basement-finishing.html";
-        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        const tagline = "I finished the Connecticut Basement Systems Trivia Game";
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(tagline)}`;
         window.open(facebookShareUrl, "_blank");
     });
     
@@ -447,7 +450,8 @@ function openCrawlSpace() {
     const shareFacebookButton = document.getElementById("share_button_crawl");
     shareFacebookButton.addEventListener("click", function() {
         const shareUrl = "https://www.connecticutbasementsystems.com/html";
-        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        const tagline = "I finished the Connecticut Basement Systems Trivia Game"
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(tagline)}`;
         window.open(facebookShareUrl, "_blank");
     });
     
@@ -535,7 +539,8 @@ function openFoundation() {
     const shareFacebookButton = document.getElementById("share_button_foundation");
     shareFacebookButton.addEventListener("click", function() {
         const shareUrl = "https://www.connecticutbasementsystems.com/html";
-        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        const tagline = "I finished the Connecticut Basement Systems Trivia Game";
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(tagline)}`;
         window.open(facebookShareUrl, "_blank");
     });
     
@@ -623,7 +628,8 @@ function openAir() {
     const shareFacebookButton = document.getElementById("share_button_air");
     shareFacebookButton.addEventListener("click", function() {
         const shareUrl = "https://www.connecticutbasementsystems.com/html";
-        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
+        const tagline= "I finished the Connecticut Basement Systems Trivia Game";
+        const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(tagline)}`;
         window.open(facebookShareUrl, "_blank");
     });
     
