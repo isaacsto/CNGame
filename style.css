@@ -23,7 +23,7 @@ h1 {
 h2 {
     font-size: 1.5rem; 
     text-align: center; 
-    padding: 10px; 
+    padding: 10px 100px; 
 }
 
 .container-wrap {
@@ -520,7 +520,7 @@ button#close-foundation, button#close-air, .close-quiz {
     display: none;  
 }
 
-.quiz-content, .quiz-content-wp,  .quiz-content-crawl, .quiz-content-foundation, .quiz-content-air {
+.quiz-content, .quiz-content-wp, .quiz-content-gutters,  .quiz-content-crawl, .quiz-content-foundation, .quiz-content-air {
     position: fixed; 
     top: 50%;
     left: 50%;
@@ -536,21 +536,6 @@ button#close-foundation, button#close-air, .close-quiz {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.quiz-content-gutters {
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    z-index: 1001; 
-    display: flex; 
-    justify-content: center; 
-    flex-direction: column; 
-    background-repeat: no-repeat;
-    background-color: white; 
-    border-radius: 20px;  
-    padding: 5px 60px 20px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
 
 form {
     padding: 10px; 
