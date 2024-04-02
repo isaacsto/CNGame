@@ -246,7 +246,7 @@ function openBasementWaterproofing() {
             resultText.textContent = "Please select an answer.";
         } else {
             const answer = selectedAnswer.value;
-            if (answer === "d") {
+            if (answer === "c") {
                 resultText.textContent = "Correct! Do you want to share this on Facebook?";
                 resultText.classList.add("correct");
             } else {
