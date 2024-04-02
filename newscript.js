@@ -86,6 +86,7 @@ function closePopupFoundation() {
 
 //openBasementFinishing is commented the other functions are the same
 function openBasementFinishing() {
+    location.reload();
     // logic to open popup 
     const popup = document.getElementById("popup");
     popup.style.display = "block";
@@ -178,6 +179,7 @@ shareFacebookButton.addEventListener("click", function() {
 }
 
 function openBasementWaterproofing() {
+    location.reload();
     const popup = document.getElementById("popup-wp");
     popup.style.display = "block";
     document.body.classList.add("popup-active");
@@ -269,6 +271,7 @@ function openBasementWaterproofing() {
 }   
 
 function openGutters() {
+    location.reload();
     const popup = document.getElementById("popup-gutters");
     popup.style.display = "block";
     document.body.classList.add("popup-active");
@@ -358,6 +361,7 @@ function openGutters() {
 }
 
 function openCrawlSpace() {
+    location.reload();
     const popup = document.getElementById("popup-crawl");
     popup.style.display = "block";
     document.body.classList.add("popup-active");
@@ -447,6 +451,7 @@ function openCrawlSpace() {
 }
 
 function openFoundation() {
+    location.reload();
     const popup = document.getElementById("popup-foundation");
     popup.style.display = "block";
     document.body.classList.add("popup-active");
@@ -535,6 +540,7 @@ function openFoundation() {
 }
 
 function openAir() {
+    location.reload();
     const popup = document.getElementById("popup-air");
     popup.style.display = "block";
     document.body.classList.add("popup-active");
