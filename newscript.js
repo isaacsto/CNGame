@@ -344,7 +344,7 @@ function openGutters() {
             resultText.textContent = "Please select an answer.";
         } else {
             const answer = selectedAnswer.value;
-            if (answer === "a") {
+            if (answer === "b") {
                 resultText.textContent = "Correct! Do you want to share this on Facebook?";
                 resultText.classList.add("correct");
             } else {
