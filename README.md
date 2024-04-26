@@ -43,7 +43,6 @@ The goal of this game is to provide an engaging way to educate potential leads a
 - **style.css**: The CSS file for styling the game interface.
 - **script.js**: The JavaScript file containing the game logic and interactivity.
 - **images/**: Directory containing images used in the game, including the house image, popup images, and results images.
-- **facebook_share.js**: JavaScript file handling Facebook sharing functionality.
 
 ## Installation and Setup
 
