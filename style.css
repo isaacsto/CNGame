@@ -8,6 +8,7 @@ h1 {
     color: #0b4882;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: 600; 
 }
 .heading {
     font-family: tg-adventor-bold, adjusted arial bold fallback, sans-serif;
@@ -24,10 +25,12 @@ h2 {
     font-size: 24px;
     color: #00aeef;
     margin: 15px auto 30px;
+    text-align: center; 
 }
 
 p {
- color: #0b4882;
+    color: #0b4882;
+    text-align: center;
 }
 
 @media screen and (max-width:500px) {
