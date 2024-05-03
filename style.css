@@ -26,7 +26,9 @@ h2 {
     margin: 15px auto 30px;
 }
 
-
+p {
+ color: #0b4882;
+}
 
 @media screen and (max-width:500px) {
     h1 {
